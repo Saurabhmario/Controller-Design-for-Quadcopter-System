@@ -1,0 +1,10 @@
+function RotAccelearation = fcn(Torque, F)
+Moment = [0 0 0];
+RotAcceleration=[0 0 0];
+I=[0.003,0.003,0.007];
+Moment(1)=(F(3)+F(4))*0.237/2-(F(1)+F(2))*0.237/2;
+Moment(2)=(F(3)+F(2))*0.237/2-(F(1)+F(4))*0.237/2;
+Moment(3)=Torque(4)-Torque(1)+Torque(2)-Torque(3);
+for i=1:3
+    RotAccelearation(i)
+end
